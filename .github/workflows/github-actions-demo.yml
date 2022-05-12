@@ -7,11 +7,11 @@ jobs:
       - run: >-
           product_type_post_data()
           {
-            cat <<EOF
+          cat <<EOF
           {
             "name": "testpsh2"
           }
-           EOF
+          EOF
           }
           product_type_post_data
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
