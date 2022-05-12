@@ -9,11 +9,17 @@ jobs:
           {
           cat <<EOF
           {
-          "name": "TESTPSH"
+          "name": "TESTPSH5"
           }
           EOF
           }
           product_type_post_data
+
+          curl -s --insecure -XPOST "https://dd-demo.whitespots.io/api/v2/product_types/" \
+          -H "Content-Type: application/json" \
+          -H "Authorization: Token ab4415af68360c086a0f50c9e44ee916ac5526bf"  \
+          -d "$(product_type_post_data)"
+
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
