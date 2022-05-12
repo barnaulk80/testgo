@@ -4,7 +4,7 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: >-
+      - run: |
           product_type_post_data()
           {
           echo test
