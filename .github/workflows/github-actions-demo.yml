@@ -7,11 +7,6 @@ jobs:
       - run: >-
           product_type_post_data()
           {
-          #cat <<EOF
-          {
-          #  "name": "testpsh2"
-          #}
-          #EOF
           echo test
           }
           product_type_post_data
